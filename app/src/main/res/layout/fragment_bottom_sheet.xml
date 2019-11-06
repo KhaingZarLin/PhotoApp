@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_peekHeight="300dp"
+    android:id="@+id/bottom_sheet"
+    app:behavior_hideable="false"
+    android:background="#fff"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:context=".fragment.BottomSheetFragment">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/user_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/nico"
+        android:background="@drawable/circle" />
+
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/user_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miguel Runa"
+        android:layout_toEndOf="@+id/user_iv" />
+
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/user_account_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="miguel_runa"
+        android:layout_toEndOf="@+id/user_iv"
+        android:layout_below="@+id/user_tv"/>
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/img_download"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_cloud_download_black_24dp"
+       android:layout_toEndOf="@+id/user_tv" />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/imageView8"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_favorite_border_black_24dp"
+         android:layout_toEndOf="@+id/img_download"/>
+
+    <TextView
+        android:layout_below="@+id/user_iv"
+        android:textSize="20dp"
+        android:id="@+id/tv_related"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Related Photos"
+       />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_related"
+        android:id="@+id/rv_related_photos"/>
+</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

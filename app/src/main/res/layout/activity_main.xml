@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/rootview">
+
+
+    <ImageView
+        android:id="@+id/img_more"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_menu_black_24dp"
+        />
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="289dp"
+        android:layout_toEndOf="@+id/img_more"
+        android:src="@drawable/ic_account_circle_black_24dp" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unsplash"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/img_more" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/txt_name"
+        android:id="@+id/txt_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beautiful,free Photos."
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <EditText
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/txt_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txt_type"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/round"
+        android:hint="Search Photos"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:textSize="18dp"
+        android:translationX="40dp"
+       />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcPhoto"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_search" />
+</RelativeLayout>
